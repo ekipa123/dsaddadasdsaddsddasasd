@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+body{
+    background-image:url(source/image1.jpg);
+    background-size: 100%;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background: #dc7a45;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 100px;
+}
+.logo {
+ font-size: 50px;
+ font-weight: 1000;
+ color: white
+  }
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration : none;
+    font-family: 'Chakra Petch', sans-serif;
+    box-sizing: border-box;
+}
+.lines{
+    display: none;
+
+}
+.nav-bar ul {
+    display: flex;
+
+}
+.nav-bar ul li a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover {
+    color: black;
+    background-color: white;
+
+}
+.nav-bar ul li a.active {
+    color: black;
+    background-color: white;
+
+}
+@media only screen and (max-width: 1320px){
+    header {
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 900px){
+   .lines{
+    display: block;
+    cursor: pointer;
+   }
+   .lines .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+   }  
+   .nav-bar{
+   height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #dc7a45;
+    transition: 0.2s;
+    overflow: hidden;
+   }
+   .nav-bar.active{
+    height: 450px;
+
+   }
+   .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+.nav-bar.active ul{
+    opacity: 1;
+}
+.nav-bar ul li a {
+    margin-bottom: 15px;
+
+}
+}
